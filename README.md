@@ -18,7 +18,7 @@ It calculates how much of each client order has been filled and outputs a format
 - **Output Formatter:** Maryam Ali || Muhammad Waqas
   - Works on `ReportGenerator` to print formatted order lines
 
-- **Matching Logic Developer:** Changrong Yin
+- **Matching Logic Developer:** Changrong Yin || Cherian Abraham
   - Implements `OrderReconciler` to match child orders to client orders and calculate fills
 
 ---
