@@ -21,6 +21,7 @@ public class ChildOrder {
 	public String getID()
 	{
 		return id;
+		return parentID;
 	}
 	
 	public String getParentID()
