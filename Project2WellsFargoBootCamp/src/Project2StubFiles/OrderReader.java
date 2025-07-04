@@ -57,7 +57,4 @@ public class OrderReader {
 
 
 
-/* catch exceptions for each of the values.
- * 
- */
- * 
+//catch exceptions for each of the values.
