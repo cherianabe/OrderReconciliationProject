@@ -9,7 +9,7 @@ It calculates how much of each client order has been filled and outputs a format
 
 ## Team Members & Responsibilities
 
-- **Helper / Project Lead:** Cherian Abraham
+- **Helper:** Cherian Abraham
   - Set up stub classes, repository structure, integration
 
 - **CSV Tester:** Maryam Ali || Muhammad Waqas
