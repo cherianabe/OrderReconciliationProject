@@ -1,54 +1,44 @@
-ChildOrder.java
-package Project2StubFiles;
+package July11FinishedBuild;
 
 public class ChildOrder {
-    public String id, parentID, symbol, side;
-    public int quantity, filledQuantity;
+    private String childOrderId;
+    private String parentId;
+    private String symbol;
+    private String side;
+    private int quantity;
+    private int filledQuantity;
 
-    // Constructor initializes all fields when an object is created
-    public ChildOrder(String id, String parentID, String symbol, String side, int quantity, int filledQuantity) {
-        this.id = id;
-        this.parentID = parentID;
+    public ChildOrder(String childOrderId, String parentId, String symbol, String side, int quantity, int filledQuantity) {
+        this.childOrderId = childOrderId;
+        this.parentId = parentId;
         this.symbol = symbol;
         this.side = side;
         this.quantity = quantity;
         this.filledQuantity = filledQuantity;
     }
 
-    // Getter for child order ID
-    public String getID() {
-        return id;
+    public String getChildOrderId() {
+        return childOrderId;
     }
 
-    // Getter for parent (client) order ID
-    public String getParentID() {
-        return parentID;
+    public String getParentId() {
+        return parentId;
     }
 
-    // Getter for stock symbol
     public String getSymbol() {
         return symbol;
     }
 
-    // Getter for side (BUY or SELL)
     public String getSide() {
         return side;
     }
 
-    // Getter for order quantity
     public int getQuantity() {
         return quantity;
     }
 
-    // Getter for how much quantity has been filled
     public int getFilledQuantity() {
         return filledQuantity;
-    }
-
-    // Converts object to readable string
-    public String toString() {
-        return "ID: " + id + " ParentID: " + parentID + " Symbol: " + symbol + 
-               " Side: " + side + " Quantity: " + quantity + " Filled Quantity: " + filledQuantity;
     }
 }
 
