@@ -59,8 +59,11 @@ It calculates how much of each client order has been filled and outputs a format
 ✅ CSV reading and parsing in progress  
 ✅ Reconciliation logic in progress  
 ✅ Final integration and formatting pending
+
    Implement MultiThreading
+   
    Implement Log Errors
+   
    Implement Design Patterns
 
 ---
