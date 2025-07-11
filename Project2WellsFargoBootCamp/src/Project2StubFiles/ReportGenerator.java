@@ -1,25 +1,19 @@
-package Project2StubFiles;
+package July11FinishedBuild;
 
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 public class ReportGenerator {
-
-    public void printReport(List<ClientOrder> clientOrders) {
-        // Sort by filled percentage descending
-        Collections.sort(clientOrders, new Comparator<ClientOrder>() {
-            @Override
-            public int compare(ClientOrder o1, ClientOrder o2) {
-                return Double.compare(o2.getFillPercentage(), o1.getFillPercentage());
-            }
-        });
+    public static void generateReport(List<ClientOrder> clientOrders) {
+        clientOrders.sort((a, b) -> Double.compare(
+            (double)b.getFilledQuantity() / b.getQuantity(),
+            (double)a.getFilledQuantity() / a.getQuantity()
+        ));
 
         for (ClientOrder client : clientOrders) {
-            System.out.println("Client Order " + client.getID()
-                    + " | Symbol: " + client.getSymbol()
-                    + " | Filled: " + client.getFilledQuantity() + " / " + client.getQuantity()
-                    + " | Status: " + client.getStatus());
-        }
-    }
+            System.out.println("Client Order " + client.getClientOrderId()
+                + " | Symbol: " + client.getSymbol()
+                + " | Filled: " + client.getFilledQuantity() + " / " + client.getQuantity()
+                + " | Status: " + client.getStatus());
+        }
+    }
 }
