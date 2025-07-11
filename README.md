@@ -56,9 +56,12 @@ It calculates how much of each client order has been filled and outputs a format
 ## Status
 
 ✅ Stub classes completed  
-⬜ CSV reading and parsing in progress  
-⬜ Reconciliation logic in progress  
-⬜ Final integration and formatting pending
+✅ CSV reading and parsing in progress  
+✅ Reconciliation logic in progress  
+✅ Final integration and formatting pending
+   Implement MultiThreading
+   Implement Log Errors
+   Implement Design Patterns
 
 ---
 
