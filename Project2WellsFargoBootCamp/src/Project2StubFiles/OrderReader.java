@@ -1,60 +1,43 @@
-package Project2StubFiles;
-
+package July11FinishedBuild;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class OrderReader {
-
-    public List<ClientOrder> readClientOrders(String filePath) {
+    public static List<ClientOrder> readClientOrders(String filePath) throws IOException {
         List<ClientOrder> clientOrders = new ArrayList<>();
-
-        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
-            String line = br.readLine(); // Skip header
-            while ((line = br.readLine()) != null) {
-                String[] parts = line.split(",");
-                String id = parts[0];
-                String symbol = parts[1];
-                String side = parts[2];
-                int quantity = Integer.parseInt(parts[3]);
-
-                ClientOrder order = new ClientOrder(id, symbol, side, quantity);
-                clientOrders.add(order);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
+        BufferedReader br = new BufferedReader(new FileReader(filePath));
+        String line;
+        br.readLine(); // skip header
+        while ((line = br.readLine()) != null) {
+            String[] parts = line.split(",");
+            String clientOrderId = parts[0].trim();
+            String symbol = parts[1].trim();
+            String side = parts[2].trim();
+            int quantity = Integer.parseInt(parts[3].trim());
+            clientOrders.add(new ClientOrder(clientOrderId, symbol, side, quantity));
         }
-
+        br.close();
         return clientOrders;
     }
 
-    public List<ChildOrder> readChildOrders(String filePath) {
+    public static List<ChildOrder> readChildOrders(String filePath) throws IOException {
         List<ChildOrder> childOrders = new ArrayList<>();
-
-        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
-            String line = br.readLine(); // Skip header
-            while ((line = br.readLine()) != null) {
-                String[] parts = line.split(",");
-                String childId = parts[0];
-                String parentId = parts[1];
-                String symbol = parts[2];
-                String side = parts[3];
-                int quantity = Integer.parseInt(parts[4]);
-                int filledQuantity = Integer.parseInt(parts[5]);
-
-                ChildOrder child = new ChildOrder(parentId, symbol, side, quantity, filledQuantity);
-                childOrders.add(child);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
+        BufferedReader br = new BufferedReader(new FileReader(filePath));
+        String line;
+        br.readLine(); // skip header
+        while ((line = br.readLine()) != null) {
+            String[] parts = line.split(",");
+            String childOrderId = parts[0].trim();
+            String parentId = parts[1].trim();
+            String symbol = parts[2].trim();
+            String side = parts[3].trim();
+            int quantity = Integer.parseInt(parts[4].trim());
+            int filledQuantity = Integer.parseInt(parts[5].trim());
+            childOrders.add(new ChildOrder(childOrderId, parentId, symbol, side, quantity, filledQuantity));
         }
-
+        br.close();
         return childOrders;
     }
 }
 
-
-
-
-//catch exceptions for each of the values.
