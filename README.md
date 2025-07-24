@@ -60,14 +60,20 @@ It calculates how much of each client order has been filled and outputs a format
 ✅ Reconciliation logic in progress  
 ✅ Final integration and formatting pending
 
-   Implement MultiThreading
+✅   Implement MultiThreading
    
-   Implement Log Errors
+✅   Implement Log Errors
    
-   Implement Design Patterns
+✅  Implement Design Patterns
 
 ---
 
 ## Contact
 
 Feel free to reach out in the group chat or open an issue on GitHub for questions!
+
+
+## Where are the main files?
+Under src, you're able to find the **final** files used for the project. I had difficulty repo the new package through Eclipse, so I uploaded the files seperately. To run the program, head to Main, and ensure you have the CSV files provided (or any CSV file containing the fields) in the same folder as your classes. 
+
+It's been a pleasure working on this and interacting with the team! I'm excited to try to implement these ideas to some personal projects I'm working on!
