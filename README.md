@@ -74,6 +74,6 @@ Feel free to reach out in the group chat or open an issue on GitHub for question
 
 
 ## Where are the main files?
-Under src, you're able to find the **final** files used for the project. I had difficulty repo the new package through Eclipse, so I uploaded the files seperately. To run the program, head to Main, and ensure you have the CSV files provided (or any CSV file containing the fields) in the same folder as your classes. 
+Under src, you're able to find the **final** files used for the project. I had difficulty uploading the final package through Eclipse, so I uploaded the files seperately. To run the program, head to Main, and ensure you have the CSV files provided (or any CSV file containing the fields) in the same folder as your classes. 
 
-It's been a pleasure working on this and interacting with the team! I'm excited to try to implement these ideas to some personal projects I'm working on!
+It's been a pleasure working on this and working with the team! I'm excited to try to implement these ideas to some personal projects I'm working on!
